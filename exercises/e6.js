@@ -4,8 +4,8 @@
 // getClientWithNoMoney(bankAccounts) => ['Kevin', 'Jon']
 
 export function getClientWithNoMoney(array) {
-  // Your code goes here...
-
+  // my editor reformats onSave. This is the format it changes it to once I try to add line breaks before each method
+  return array.filter((el) => el.balance === 0).map((el) => el.name);
 }
 
 // === TEST YOURSELF ===

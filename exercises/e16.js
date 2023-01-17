@@ -4,12 +4,7 @@
 // flatArrays([['d', 'r', 'a'], ['f', 'y']]) => ['d', 'r', 'a', 'f', 'y']
 // NOTE: You can NOT use the array.flat() method in your code
 
-export function flatArrays(array) {
-  return array.reduce((acc, curVal) => {
-    return acc.concat(curVal);
-  }, []);
-  // Your code goes here...
-}
+export function flatArrays(array) {}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"

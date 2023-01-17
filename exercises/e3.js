@@ -1,14 +1,15 @@
-
 // EXERCISE 3
 // Return the average value for the given array of numbers, f.i.
 // getAverage([22, 45, 4, 65]) => 34
 
 export function getAverage(array) {
   // Your code goes here...
-
+  return (
+    array.reduce((sum, num) => {
+      return sum + num;
+    }, 0) / array.length
+  );
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"

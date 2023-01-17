@@ -4,8 +4,6 @@
 
 export function getFirstTenNumbers() {
   // Your code goes here...
-
-  askldjf;
 }
 
 // === TEST YOURSELF ===

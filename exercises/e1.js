@@ -6,6 +6,8 @@
 export function getFirstTenNumbers() {
   // Your code goes here...
 
+  
+
 }
 
 // === TEST YOURSELF ===

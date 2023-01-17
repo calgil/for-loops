@@ -4,7 +4,22 @@
 // flatArrays([['d', 'r', 'a'], ['f', 'y']]) => ['d', 'r', 'a', 'f', 'y']
 // NOTE: You can NOT use the array.flat() method in your code
 
-export function flatArrays(array) {}
+export function flatArrays(array) {
+  // return array.reduce((acc, curVal) => {
+  //     return acc.concat(curVal);
+  //   }, []);
+  const flatArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > 1) {
+      for (let j = 0; j < array[i].length; j++) {
+        flatArray.push(array[i][j]);
+      }
+      continue;
+    }
+    flatArray.push(array[i]);
+  }
+  return flatArray;
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"

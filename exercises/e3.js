@@ -4,11 +4,16 @@
 
 export function getAverage(array) {
   // Your code goes here...
-  return (
-    array.reduce((sum, num) => {
-      return sum + num;
-    }, 0) / array.length
-  );
+  // return (
+  //   array.reduce((sum, num) => {
+  //     return sum + num;
+  //   }, 0) / array.length
+  // );
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum / array.length;
 }
 
 // === TEST YOURSELF ===

@@ -4,12 +4,12 @@
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
 export function getAllClientNames(array) {
-  // const names = [];
-  // for (let i = 0; i < array.length; i++) {
-  //   names.push(array[i].name);
-  // }
-  // return names;
-  return array.map((el) => el.name);
+  // return array.map((el) => el.name);
+  const names = [];
+  for (let i = 0; i < array.length; i++) {
+    names.push(array[i].name);
+  }
+  return names;
 }
 
 // === TEST YOURSELF ===

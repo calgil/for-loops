@@ -6,16 +6,16 @@
 export function getClientWithNoMoney(array) {
   // my editor reformats onSave. This is the format it changes it to once I try to add line breaks before each method
   // return array.filter((el) => el.balance === 0).map((el) => el.name);
-  const accountsGreaterThan0 = [];
+  const accountsWithoutMoney = [];
   for (let i = 0; i < array.length; i++) {
     if (array[i].balance === 0) {
-      accountsGreaterThan0.push(array[i]);
+      accountsWithoutMoney.push(array[i]);
       continue;
     }
   }
   const names = [];
-  for (let j = 0; j < accountsGreaterThan0.length; j++) {
-    names.push(accountsGreaterThan0[j].name);
+  for (let j = 0; j < accountsWithoutMoney.length; j++) {
+    names.push(accountsWithoutMoney[j].name);
   }
   return names;
 }

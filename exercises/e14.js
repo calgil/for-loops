@@ -10,17 +10,30 @@ export function getClientsWithWrongBalance(array) {
     if (!array[i].deposits || !array[i].withdrawals) {
       continue;
     }
-    const isCorrect =
-      array[i].deposits.reduce((a, b) => a + b, 0) -
-        array[i].withdrawals.reduce((a, b) => a + b, 0) ===
-      array[i].balance;
+    // const isCorrect =
+    //   array[i].deposits.reduce((a, b) => a + b, 0) -
+    //     array[i].withdrawals.reduce((a, b) => a + b, 0) ===
+    //   array[i].balance;
+    // if (!isCorrect) {
+    //   clientWithWrongBalance.push(array[i]);
+    // }
+
+    let depositTotal = 0;
+    const { deposits } = array[i];
+    for (let j = 0; j < deposits.length; j++) {
+      depositTotal += deposits[j];
+    }
+    let withdrawalTotal = 0;
+    const { withdrawals } = array[i];
+    for (let k = 0; k < withdrawals.length; k++) {
+      withdrawalTotal += withdrawals[k];
+    }
+    let isCorrect = depositTotal - withdrawalTotal === array[i].balance;
     if (!isCorrect) {
       clientWithWrongBalance.push(array[i]);
     }
   }
-
   return clientWithWrongBalance;
-  // Your code goes here...
 }
 
 // === TEST YOURSELF ===

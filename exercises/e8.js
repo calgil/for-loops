@@ -4,10 +4,23 @@
 // getClientWithGreatestBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
 export function getClientWithGreatestBalance(array) {
-  const clientsFromLargestToSmallestBalance = array.sort(
-    (a, b) => b.balance - a.balance
-  );
-  return [clientsFromLargestToSmallestBalance[0]];
+  // const clientsFromLargestToSmallestBalance = array.sort(
+  //   (a, b) => b.balance - a.balance
+  // );
+  // return [clientsFromLargestToSmallestBalance[0]];
+
+  let greatestBalance = [];
+  for (let i = 0; i < array.length; i++) {
+    if (greatestBalance[0] === undefined) {
+      greatestBalance = [array[i]];
+      continue;
+    }
+    if (greatestBalance[0].balance > array[i].balance) {
+      continue;
+    }
+    greatestBalance = [array[i]];
+  }
+  return greatestBalance;
 }
 
 // === TEST YOURSELF ===

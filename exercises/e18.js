@@ -7,7 +7,7 @@
 // I added the space that needs to be before the ! in the test so that this works
 
 export function joinToString(array, separator) {
-  return array.join(separator);
+  for (let i = 0; i < array.length; i++) {}
 }
 
 // === TEST YOURSELF ===

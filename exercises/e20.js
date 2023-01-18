@@ -7,9 +7,10 @@ export function separateNamesWithAFromRest(array) {
   const aNames = [];
   const otherNames = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i].includes("a")) {
-      aNames.push(array[i]);
-      continue;
+    for (let k = 0; k < array[i].length; k++) {
+      if (array[i][k].toLowerCase() === "a") {
+        aNames.push(array[i]);
+      }
     }
     otherNames.push(array[i]);
   }

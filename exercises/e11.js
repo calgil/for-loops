@@ -10,8 +10,12 @@ export function getAllWithdrawals(array) {
       returnArray.push(0);
       continue;
     }
-    const sum = array[i].withdrawals.reduce((a, b) => a + b, 0);
-    returnArray.push(sum);
+    const { withdrawals } = array[i];
+    let withdrawalTotal = 0;
+    for (let j = 0; j < withdrawals.length; j++) {
+      withdrawalTotal += withdrawals[j];
+    }
+    returnArray.push(withdrawalTotal);
   }
   return returnArray;
 }

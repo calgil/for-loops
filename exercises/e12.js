@@ -9,12 +9,12 @@ export function getAllDepositsGreaterThanOneHundred(array) {
     if (!array[i].deposits) {
       continue;
     }
-    array[i].deposits.map((el) => {
-      if (el <= 100) {
-        return;
+    const { deposits } = array[i];
+    for (let j = 0; j < deposits.length; j++) {
+      if (deposits[j] > 100) {
+        returnArray.push(deposits[j]);
       }
-      returnArray.push(el);
-    });
+    }
   }
   return returnArray;
 }
